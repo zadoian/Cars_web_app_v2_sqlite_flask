@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Search Results</h1>
+{% if cars %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Color</th>
+            <th>Brand</th>
+        </tr>
+        {% for car in cars %}
+        <tr>
+            <td>{{ car['id'] }}</td>
+            <td>{{ car['Customer'] }}</td>
+            <td>{{ car['Color'] }}</td>
+            <td>{{ car['Brand'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No results found for the given criteria.</p>
+{% endif %}
+{% endblock %}

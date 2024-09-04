@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Edit Car Details</h1>
+<form method="POST">
+    <label for="color">New Car Color:</label>
+    <input type="text" id="color" name="color" value="{{ car['Color'] }}" required><br><br>
+
+    <label for="brand">New Car Brand:</label>
+    <input type="text" id="brand" name="brand" value="{{ car['Brand'] }}" required><br><br>
+
+    <input type="submit" value="Update Car">
+</form>
+{% endblock %}

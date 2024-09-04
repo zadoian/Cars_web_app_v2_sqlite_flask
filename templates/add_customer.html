@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Add a New Customer and Car</h1>
+<form method="POST">
+    <label for="customer">Customer Name:</label>
+    <input type="text" id="customer" name="customer" required><br><br>
+
+    <label for="color">Car Color:</label>
+    <input type="text" id="color" name="color" required><br><br>
+
+    <label for="brand">Car Brand:</label>
+    <input type="text" id="brand" name="brand" required><br><br>
+
+    <input type="submit" value="Add Customer and Car">
+</form>
+{% endblock %}
